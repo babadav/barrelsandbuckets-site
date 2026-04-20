@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Inventory of Barrels, Drums, Buckets & IBC Totes</title>
+    <meta
+      name="description"
+      content="Browse sanitized live inventory for plastic barrels, steel drums, buckets, pails, and IBC totes. Subject to prior sale. Request current availability and pricing."
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body data-page="inventory">
+    <header data-site-header></header>
+    <main>
+      <section class="hero hero-subpage">
+        <div class="container subpage-copy">
+          <p class="eyebrow">Live Inventory</p>
+          <h1>Current availability for containers and surplus packaging</h1>
+          <p class="lede">
+            Listings shown here come from a sanitized public inventory layer. Inventory is subject
+            to prior sale, and pricing depends on quantity, condition, and freight destination.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container inventory-layout">
+          <aside class="filter-panel">
+            <h2>Filter Inventory</h2>
+            <label>
+              Category
+              <select data-filter="category">
+                <option value="all">All Categories</option>
+                <option value="plastic-barrels">Plastic Barrels</option>
+                <option value="steel-drums">Steel Drums</option>
+                <option value="buckets-pails">Buckets &amp; Pails</option>
+                <option value="ibc-totes">IBC Totes</option>
+              </select>
+            </label>
+            <label>
+              Condition
+              <select data-filter="condition">
+                <option value="all">All Conditions</option>
+                <option value="new">New</option>
+                <option value="reconditioned">Reconditioned</option>
+                <option value="used">Used</option>
+                <option value="rebottled">Rebottled</option>
+              </select>
+            </label>
+            <label>
+              Region
+              <select data-filter="region">
+                <option value="all">All Regions</option>
+                <option value="Southeast">Southeast</option>
+                <option value="Midwest">Midwest</option>
+                <option value="Northeast">Northeast</option>
+                <option value="Southwest">Southwest</option>
+              </select>
+            </label>
+            <div class="panel-note">
+              <strong>Request current availability</strong>
+              <p>Do not treat displayed quantity as guaranteed live stock. Use the listing CTA to confirm.</p>
+            </div>
+          </aside>
+          <div>
+            <div class="inventory-disclaimer">
+              <p>Subject to prior sale. Contact us for pricing, freight options, and current availability.</p>
+            </div>
+            <div class="inventory-grid" data-inventory-grid></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-contrast">
+        <div class="container split-panel">
+          <div>
+            <p class="eyebrow">Need Something Else?</p>
+            <h2>Don’t see your exact spec?</h2>
+            <p>
+              Buyers often need a specific size, condition, or quantity that is not posted
+              publicly. Send the requirement and we can source against current relationships.
+            </p>
+          </div>
+          <form class="inquiry-form">
+            <label>
+              What do you need?
+              <input type="text" placeholder="Example: 55 gallon plastic barrels" />
+            </label>
+            <label>
+              Approximate quantity
+              <input type="text" placeholder="Example: 200 units" />
+            </label>
+            <label>
+              Destination region
+              <input type="text" placeholder="Example: Southeast" />
+            </label>
+            <button type="button" class="button button-primary">Submit Inquiry</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer data-site-footer></footer>
+    <script src="data/public-inventory.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
